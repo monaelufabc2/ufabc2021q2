@@ -14,6 +14,8 @@ public class Tuitando2
             totLetras = totLetras + txt.length() + 1;
         }
 
+        totLetras = totLetras - 1;
+
         if(totLetras <= 140)
         {
             System.out.println("TWEET");
