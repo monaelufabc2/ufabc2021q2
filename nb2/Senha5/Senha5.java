@@ -9,7 +9,7 @@ public class Senha5
 
         while(scan.hasNext())
         {
-            password = scan.next();
+            password = scan.nextLine();
             if(isValidPassword(password))
             {
                 System.out.println("Senha valida.");
@@ -24,8 +24,14 @@ public class Senha5
     public static boolean isValidPassword(String p)
     {
         int i;
-        boolean temDig = false, temMaiusc = false, temMinus = false, temSimb = false;
-        for(i=0; i<p.length(); i++)
+        boolean temDig = false, temMaiusc = false, temMinus = false, temSimb = false, tamOk = false;
+
+        if(p.length() > 5 && p.length() < 33)
+        {
+            tamOk = true;
+        }
+
+        for(i=0; i<p.length() && tamOk; i++)
         {
             if(Character.isDigit(p.charAt(i)))
             {
@@ -36,7 +42,8 @@ public class Senha5
             {
                 temMaiusc = true;
             }
-            else
+
+            if(Character.isLowerCase(p.charAt(i)))
             {
                 temMinus = true;
             }
@@ -47,6 +54,6 @@ public class Senha5
             }
         }
 
-        return temDig && temMaiusc && temMinus && !temSimb;
+        return temDig && temMaiusc && temMinus && !temSimb && tamOk;
     }
 }
