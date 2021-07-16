@@ -7,8 +7,8 @@ public class Atletas
     public static void main(String[] args)
     {
         int idades[] = new int[TAMANHO], i, qtdMasc = 0, qtdFem = 0, qtdMascAcimaMedAltura = 0, qtdFemAbaixoMedPeso = 0;
-        float alturas[] = new float[TAMANHO], somaAlturaMasc = 0f, mediaAltMasc;
-        float pesos[] = new float[TAMANHO], somaPesoFem = 0f, mediaPesoFem;
+        float alturas[] = new float[TAMANHO], somaAlturaMasc = 0f, mediaAltMasc = 0f;
+        float pesos[] = new float[TAMANHO], somaPesoFem = 0f, mediaPesoFem = 0f;
         char generos[] = new char[TAMANHO];
         Scanner scan = new Scanner(System.in);
 
@@ -35,13 +35,14 @@ public class Atletas
             }
         }
 
-        System.out.println(somaAlturaMasc);
-        System.out.println(qtdMasc);
-        System.out.println(somaPesoFem);
-        System.out.println(qtdFem);
-
-        mediaAltMasc = somaAlturaMasc/qtdMasc;
-        mediaPesoFem = somaPesoFem/qtdFem;
+        if(qtdMasc != 0)
+        {
+            mediaAltMasc = somaAlturaMasc/qtdMasc;
+        }
+        if(qtdFem != 0)
+        {
+            mediaPesoFem = somaPesoFem/qtdFem;
+        }
 
         for(i=0; i<TAMANHO; i++)
         {
