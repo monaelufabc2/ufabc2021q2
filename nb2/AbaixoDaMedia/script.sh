@@ -1,0 +1,10 @@
+java AbaixoDaMedia < input/file0 > output/file0
+java AbaixoDaMedia < input/file1 > output/file1
+java AbaixoDaMedia < input/file2 > output/file2
+java AbaixoDaMedia < input/file3 > output/file3
+java AbaixoDaMedia < input/file4 > output/file4
+java AbaixoDaMedia < input/file5 > output/file5
+java AbaixoDaMedia < input/file6 > output/file6
+java AbaixoDaMedia < input/file7 > output/file7
+java AbaixoDaMedia < input/file8 > output/file8
+java AbaixoDaMedia < input/file9 > output/file9

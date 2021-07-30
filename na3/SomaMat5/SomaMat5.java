@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class SomaMat5
+{
+    public static void main(String[] args)
+    {
+        int n, m, mat[][], i, j;
+        Scanner scan = new Scanner(System.in);
+
+        n = scan.nextInt();
+        m = scan.nextInt();
+
+        mat = new int[n][m];
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<m; j++)
+            {
+                mat[i][j] = scan.nextInt();
+            }
+        }
+
+        System.out.println("Somatorio da Matriz: " + somaMat(mat, n, m));
+    }
+
+    public static long somaMat(int mat[][], int n, int m)
+    {
+        int i, j;
+        long soma = 0l;
+
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<m; j++)
+            {
+                soma = soma + mat[i][j];
+            }
+        }
+
+        return soma;
+    }
+}
